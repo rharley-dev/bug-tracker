@@ -15,7 +15,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <Link className="nav-link" to="/">
-        <h1>Bug-Tracker</h1>
+        <h2 className="brand">Bug-Tracker</h2>
       </Link>
       <ul>
         <li>

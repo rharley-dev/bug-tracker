@@ -31,7 +31,7 @@ export default function Login() {
   return (
     <div className="loginBG">
       <form className="login-panel">
-        <h1>Login:</h1>
+        <h1 className="login">Login:</h1>
         <input
           name="name"
           placeholder="Name"
