@@ -7,7 +7,12 @@ import Sidebar from './View/Sidbar/sidebar.jsx';
 
 function App() {
   const { auth } = useSelector(state => state);
-  return <Router>{!auth.LoggedIn ? <Login /> : <Sidebar />} </Router>;
+  return (
+    <Router>
+      {!auth.LoggedIn ? <Login /> : <></>}
+      <Sidebar />
+    </Router>
+  );
 }
 
 export default App;

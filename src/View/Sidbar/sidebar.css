@@ -4,5 +4,27 @@
   width: 20%;
   height: 100vw;
   background-color: var(--prime-color);
+  border-right: 1px solid var(--second-color);
   text-align: center;
+}
+
+.sidebar .nav-link {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 5px;
+  font-size: 1.3rem;
+  border-bottom: 1px groove var(--forth-color);
+}
+
+.sidebar li:hover {
+  transition: all 0.5s;
+  background-color: var(--second-color);
 }

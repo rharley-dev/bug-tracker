@@ -9,7 +9,7 @@ import bugReducer from './Controllers/Redux/bugSlice';
 import userReducer from './Controllers/Redux/userSlice';
 import './index.css';
 
-// organize reducers within the state
+// organize and combine reducers within the state
 const reducer = combineReducers({
   auth: authReducer,
   bug: bugReducer,

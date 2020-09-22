@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; //href for route navigation
 import { useDispatch, useSelector } from 'react-redux';
 
 import { signOut } from '../../Controllers/Redux/authSlice';
-import './sidebar.css'
+import './sidebar.css';
 
 export default function Sidebar() {
   const dispatch = useDispatch();
@@ -28,15 +28,13 @@ export default function Sidebar() {
             View Bugs
           </Link>
         </li>
-        {auth.admin && (
-          <li>
-            <Link to="/createbugs" className="nav-link">
-              Create Bug
-            </Link>
-          </li>
-        )}
+        <li>
+          <Link to="/createbugs" className="nav-link">
+            Create Bug
+          </Link>
+        </li>
       </ul>
-      <button className="nav-link logout" onClick={SignOut}>
+      <button className="logout" onClick={SignOut}>
         Logout
       </button>
     </div>

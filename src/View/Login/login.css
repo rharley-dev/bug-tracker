@@ -1,7 +1,7 @@
 .loginBG {
   width: 100vw;
   height: 105vh;
-  background: url(../../Images/weather.jpg);
+  background: url(../../Images/Bug-Tracker.jpg);
   background-size: cover;
   grid-column: 1/2;
   background-color: rgba(0, 0, 0, 0.336);
@@ -12,7 +12,7 @@
 
 .login-panel {
   background-color: var(--prime-color);
-  width: 30vw;
+  width: 50vw;
   border: 1px solid var(--second-color);
   border-radius: 5px;
   margin: 25vh auto;
@@ -27,7 +27,7 @@
 }
 
 .login-panel input {
-  width: 80%;
+  width: 90%;
   height: 30px;
   border-radius: 0px;
   border: none;

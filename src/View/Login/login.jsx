@@ -6,7 +6,6 @@ import './login.css';
 
 export default function Login() {
   const dispatch = useDispatch();
-
   const [formInput, setFormInput] = useState({
     name: '',
     password: '',
@@ -26,6 +25,7 @@ export default function Login() {
     dispatch(signIn(formInput)); 
     // prevent page from reloading
     e.preventDefault(); 
+    
   }
 
   return (
