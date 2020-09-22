@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import { Provider } from 'react-redux';
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
+import App from './App';
 import authReducer from './Controllers/Redux/authSlice';
 import bugReducer from './Controllers/Redux/bugSlice';
 import userReducer from './Controllers/Redux/userSlice';
+import './index.css';
 
 // organize reducers within the state
 const reducer = combineReducers({
