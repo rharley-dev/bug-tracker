@@ -3,7 +3,7 @@ export default bug;
 // defining the layout of this bug
 // using as a model to be utilized throughout the code
 function bug(bug) {
-  if (bug != undefined) {
+  if (bug !== undefined) {
     this._id = bug._id;
     this.name = bug.name;
     this.details = bug.details;

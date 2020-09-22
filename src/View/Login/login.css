@@ -1,0 +1,47 @@
+.loginBG {
+  width: 100vw;
+  height: 105vh;
+  background: url(../../Images/weather.jpg);
+  background-size: cover;
+  margin-left: -20.6vw;
+  margin-top: -27px;
+  background-color: rgba(0, 0, 0, 0.336);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  position: absolute;
+}
+
+.login-panel {
+  background-color: var(--prime-color);
+  width: 30vw;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  margin: 25vh auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-panel h1 {
+  width: 100%;
+}
+
+.login-panel input {
+  width: 70%;
+  height: 30px;
+  border-radius: 0px;
+  border: none;
+  margin: 10px;
+  background-color: transparent;
+  border-bottom: 2px solid var(--third-color);
+  color: var(--third-color);
+}
+
+.login-panel input:focus {
+  outline: none;
+}
+
+.login-panel input::-webkit-input-placeholder {
+  color: var(--third-color);
+}

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { signIn } from '../../Controllers/Redux/authSlice';
 import './login.css';
 
-export default function login() {
+export default function Login() {
   const dispatch = useDispatch();
 
   const [formInput, setFormInput] = useState({
@@ -11,17 +11,20 @@ export default function login() {
     password: '',
   });
 
-  function inputChange(e) {
+  function inputChanged(e) {
     setFormInput({
-      ...formInput, // set formInput as previous input
-      // to use a non-string key you need array brackets
+      // set formInput as previous input to not override stae if already entered
+      ...formInput,
+      // to use a non-string or non-value key you need array brackets
       [e.target.name]: e.target.value,
     });
   }
 
   function submit(e) {
-    dispatch(signIn(formInput)); // need to pass in a payload (formInput)
-    e.preventDefault(); // prevent page from reloading
+    // need to pass in a payload (formInput)
+    dispatch(signIn(formInput)); 
+    // prevent page from reloading
+    e.preventDefault(); 
   }
 
   return (
@@ -31,13 +34,14 @@ export default function login() {
         <input
           name="name"
           placeholder="Name"
-          onChange={inputChange}
+          onChange={inputChanged}
           value={formInput.name}
         ></input>
         <input
           name="password"
+          type="password"
           placeholder="Password"
-          onChange={inputChange}
+          onChange={inputChanged}
           value={formInput.password}
         ></input>
         <button type="submit" onClick={submit}>
