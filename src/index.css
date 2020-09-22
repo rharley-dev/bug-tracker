@@ -1,5 +1,7 @@
-html {
-  margin-left: 20vw;
+#root {
+  grid-template-columns: 20% 80%;
+  display: grid;
+  margin: -8px;
   --prime-color: #112d4e; /* to set a variable in css use -- */
   --second-color: #3f72af;
   --third-color: #dbe2ef;

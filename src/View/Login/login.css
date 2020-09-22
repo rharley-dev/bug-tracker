@@ -3,8 +3,7 @@
   height: 105vh;
   background: url(../../Images/weather.jpg);
   background-size: cover;
-  margin-left: -20.6vw;
-  margin-top: -27px;
+  grid-column: 1/2;
   background-color: rgba(0, 0, 0, 0.336);
   background-blend-mode: multiply;
   background-attachment: fixed;
@@ -28,7 +27,7 @@
 }
 
 .login-panel input {
-  width: 70%;
+  width: 80%;
   height: 30px;
   border-radius: 0px;
   border: none;
