@@ -13,7 +13,7 @@ export default function Login() {
 
   function inputChanged(e) {
     setFormInput({
-      // set formInput as previous input to not override stae if already entered
+      // set formInput as previous input to not override state if already entered
       ...formInput,
       // to use a non-string or non-value key you need array brackets
       [e.target.name]: e.target.value,

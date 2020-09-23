@@ -41,7 +41,9 @@
   color: var(--third-color);
 }
 
-.login-panel input:focus {
+.login-panel input:focus, input:active {
+  /* background-color: transparent; */
+  box-shadow: none;
   outline: none;
 }
 
