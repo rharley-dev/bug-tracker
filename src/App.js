@@ -11,6 +11,7 @@ function App() {
   return (
     <Router>
       {!auth.LoggedIn ? <Login /> : <></>}
+      <Bugs />
       <Sidebar />
     </Router>
   );

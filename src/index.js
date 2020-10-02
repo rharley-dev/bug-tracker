@@ -12,7 +12,7 @@ import './index.css';
 // organize and combine reducers within the state
 const reducer = combineReducers({
   auth: authReducer,
-  bug: bugReducer,
+  bugs: bugReducer,
   user: userReducer,
 });
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import './bugCard.css';
 
-export default function BugCard(props) {
+export default (props) => {
+  // const { name, priority, version } = props.bug;
   function Clicked() {
     props.clicked(props.name);
   }
+
   return (
     <div className="bug-card" onClick={Clicked}>
       <h2 className="name">{props.name}</h2>

@@ -9,7 +9,7 @@ export default function Bugs() {
   const { bugs } = useSelector(state => state);
 
   useEffect(() => {
-    dispatch(getBugs);
+    dispatch(getBugs());
   }, [bugs.length < 1]);
   return (
     <div className="page-container">
