@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { signIn } from '../../Controllers/Redux/authSlice';
 import './login.css';
 
-export default function Login() {
+export default () => {
   const dispatch = useDispatch();
   const [formInput, setFormInput] = useState({
     name: '',

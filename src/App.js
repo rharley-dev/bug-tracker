@@ -10,7 +10,7 @@ function App() {
   const { auth } = useSelector(state => state);
   return (
     <Router>
-      {!auth.LoggedIn ? <Login /> : <></>}
+      {!auth.LoggedIn ? <Login /> : <h1>Hello</h1>}
       <Bugs />
       <Sidebar />
     </Router>
