@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux'; // hook to grab data in state
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Login from './View/Login/login';
 import Sidebar from './View/Sidbar/sidebar';
@@ -14,8 +14,10 @@ function App() {
         <Login />
       ) : (
         <>
-          <Bugs />
           <Sidebar />
+          <Switch>
+            <Route path='/viewbugs'><Bugs /></Route>
+          </Switch>
         </>
       )}
     </Router>
