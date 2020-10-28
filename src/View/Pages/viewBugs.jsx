@@ -14,7 +14,7 @@ export default function Bugs() {
   return (
     <div className="page-container">
       {bugs.map((bug, key) => (
-        <BugCard key={key} props={bug} />
+        <BugCard key={key} bug={bug} />
       ))}
     </div>
   );
