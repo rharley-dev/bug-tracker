@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import './bugViewSection.css'
+import './bugViewSection.css';
 
-export default (props) => {
+export default props => {
   return (
-    <div className='view-section'>
-      <h1>{props.title} </h1>
+    <div className="view-section">
+      <h2>{props.title}</h2>
       <p>{props.info}</p>
     </div>
-  )
-}
+  );
+};

@@ -6,7 +6,7 @@ import { getBugs } from '../../Controllers/Redux/bugSlice';
 import BugCard from '../BugCard/bugCard';
 
 export default function Bugs() {
-  const [displayBug, setDisplayBug] = useState({
+  const [DISPLAY_BUG, SET_DISPLAY_BUG] = useState({
     name: '',
     isDisplayed: false,
   });
@@ -14,9 +14,9 @@ export default function Bugs() {
   const { bugs } = useSelector(state => state);
 
   function bugClicked(name) {
-    setDisplayBug({
+    SET_DISPLAY_BUG({
       name: name,
-      isDisplayed: !displayBug.isDisplayed,
+      isDisplayed: !DISPLAY_BUG.isDisplayed,
     });
   }
 
@@ -29,12 +29,8 @@ export default function Bugs() {
         <BugCard key={key} bug={bug} clicked={bugClicked} />
       ))}
       {/* filter passed in bug with corisponding name */}
-      {displayBug.isDisplayed && (
-        <BugView
-          bug={bugs.filter(bug => {
-            return bug.name == displayBug.name;
-          })}
-        />
+      {DISPLAY_BUG.isDisplayed && (
+        <BugView bug={bugs.filter(bug => bug.name == DISPLAY_BUG.name)[0]} />
       )}
     </div>
   );
