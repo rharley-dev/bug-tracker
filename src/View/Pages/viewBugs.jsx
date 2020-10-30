@@ -10,19 +10,23 @@ export default function Bugs() {
     name: '',
     isDisplayed: false,
   });
+
   const dispatch = useDispatch();
+  // using redux state 
   const { bugs } = useSelector(state => state);
 
   function bugClicked(name) {
+    console.log(name);
     SET_DISPLAY_BUG({
-      name: name,
       isDisplayed: !DISPLAY_BUG.isDisplayed,
+      name: name,
     });
   }
 
   useEffect(() => {
     dispatch(getBugs());
-  }, [bugs.length < 1]);
+  }, [bugs.length < 1]); // only runs when bugs = null
+
   return (
     <div className="page-container">
       {bugs.map((bug, key) => (
@@ -30,7 +34,7 @@ export default function Bugs() {
       ))}
       {/* filter passed in bug with corisponding name */}
       {DISPLAY_BUG.isDisplayed && (
-        <BugView bug={bugs.filter(bug => bug.name == DISPLAY_BUG.name)[0]} />
+        <BugView bug={bugs.filter(bug => bug.name === DISPLAY_BUG.name)[0]} />
       )}
     </div>
   );
