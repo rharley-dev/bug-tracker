@@ -16,7 +16,7 @@ export default function Bugs() {
   const { bugs } = useSelector(state => state);
 
   function bugClicked(name) {
-    console.log(name);
+    console.log(name, "hello");
     SET_DISPLAY_BUG({
       isDisplayed: !DISPLAY_BUG.isDisplayed,
       name: name,
@@ -24,8 +24,9 @@ export default function Bugs() {
   }
 
   useEffect(() => {
+    console.log(bugs.filter(bug => bug.name === DISPLAY_BUG.name)[0])
     dispatch(getBugs());
-  }, [bugs.length < 1]); // only runs when bugs = null
+  }, [0]); // only runs when bugs = null
 
   return (
     <div className="page-container">
