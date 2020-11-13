@@ -1,4 +1,4 @@
-.bug-card {
+.dashboard-card {
   background-color: var(--first-color);
   box-shadow: 2px 2px 2px var(--second-color);
   border-radius: 5px;
@@ -8,8 +8,18 @@
   min-height: 200px;
 }
 
-.bug-card:hover {
+.dashboard-card:hover {
   transition: all 0.3s;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.dashboard-card h2 {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.dashboard-card p {
+  font-size: 1.5rem;
+  margin: 50px;
 }

@@ -26,7 +26,7 @@ export default function Bugs() {
   useEffect(() => {
     console.log(bugs.filter(bug => bug.name === DISPLAY_BUG.name)[0])
     dispatch(getBugs());
-  }, [0]); // only runs when bugs = null
+  }, [bugs == undefined]); // only runs when bugs = null
 
   return (
     <div className="page-container">
