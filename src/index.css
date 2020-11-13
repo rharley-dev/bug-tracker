@@ -29,6 +29,7 @@ button:focus {
 }
 
 .page-container {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

@@ -1,6 +1,6 @@
 .loginBG {
   width: 100vw;
-  height: 105vh;
+  height: 100vh;
   background: url(../../Images/Bug-Tracker.jpg);
   background-size: cover;
   grid-column: 1/2;
