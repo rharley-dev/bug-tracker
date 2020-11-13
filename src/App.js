@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './View/Login/login';
 import Sidebar from './View/Sidbar/sidebar';
 import Bugs from './View/Pages/viewBugs';
+import CreateBug from './View/BugCreate/Edit/bugForm';
 
 function App() {
   const { auth } = useSelector(state => state);
@@ -16,7 +17,16 @@ function App() {
         <>
           <Sidebar />
           <Switch>
-            <Route path='/viewbugs'><Bugs /></Route>
+            <Route path="/viewbugs">
+              <div className="page-container">
+                <Bugs />
+              </div>
+            </Route>
+            <Route path="/createbugs">
+              <div className="page-container">
+                <CreateBug title="Create Bug" />
+              </div>
+            </Route>
           </Switch>
         </>
       )}

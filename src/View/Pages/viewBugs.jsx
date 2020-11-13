@@ -35,7 +35,7 @@ export default function Bugs() {
       ))}
       {/* filter passed in bug with corisponding name */}
       {DISPLAY_BUG.isDisplayed && (
-        <BugView bug={bugs.filter(bug => bug.name === DISPLAY_BUG.name)[0]} />
+        <BugView clicked={bugClicked} bug={bugs.filter(bug => bug.name === DISPLAY_BUG.name)[0]} />
       )}
     </div>
   );

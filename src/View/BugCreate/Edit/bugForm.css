@@ -1,4 +1,4 @@
-.bug-view {
+.bug-create {
   position: absolute;
   z-index: 10;
   width: 60vw;
@@ -12,7 +12,7 @@
   justify-content: center;
 }
 
-.bug-view h1 {
+.bug-create h1 {
   color: var(--fourth-color);
   min-width: 100%;
   text-align: center;
@@ -21,9 +21,26 @@
   border-bottom: 1px groove var(--fourth-color);
 }
 
-.close-btn {
-  position: absolute;
-  margin: 10px;
-  right: 0;
-  top: 0;
+.bug-create form {
+  min-width: 80%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.bug-create label {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.bug-create input,textarea,select {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--fourth-color);
+}
+
+.bug-create button {
+  grid-column-end: span 2;
+  justify-self: center;
 }

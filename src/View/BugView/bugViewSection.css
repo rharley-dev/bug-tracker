@@ -12,3 +12,7 @@
   border-bottom: 1px groove black;
   color: var(--first-color);
 }
+
+.view-section p {
+  color: var(--first-color);
+}
